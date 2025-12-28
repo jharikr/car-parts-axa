@@ -11,3 +11,11 @@ count.txt
 .output
 .vinxi
 todos.json
+
+#database
+*.db
+*.sqlite
+
+# drizzle
+src/server/db/**/*.js
+src/server/db/**/*.js.map
