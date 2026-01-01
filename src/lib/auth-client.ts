@@ -1,10 +1,7 @@
-import 'dotenv/config';
 import { createAuthClient } from "better-auth/react"
 
-if (!process.env.BETTER_AUTH_URL) throw new Error('BETTER_AUTH_URL is not set');
-
 export const authClient = createAuthClient({
-    baseURL: process.env.BETTER_AUTH_URL ?? "http://localhost:3000"
+    baseURL: "http://localhost:3000" // process.env.NEXT_PUBLIC_APP_URL ?? 
 })
 
-export const { signIn, signUp, useSession } = createAuthClient()
+export const { signIn, signUp, useSession, } = createAuthClient()

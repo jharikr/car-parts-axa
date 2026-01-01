@@ -4,6 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import appCss from '../styles.css?url'
 import { Toaster } from '@/components/ui/sonner'
+// import { ThemeProvider } from '@/components/providers/theme-provider'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -37,7 +38,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {/* <ThemeProvider defaultTheme="dark" storageKey='vite-ui-theme'> */}
         {children}
+        {/* </ThemeProvider> */}
         <Toaster />
         <TanStackDevtools
           config={{
